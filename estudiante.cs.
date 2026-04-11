@@ -1,0 +1,30 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Estudiante est = new Estudiante();
+        est.SetEdad(25); 
+        Console.WriteLine(est.Edad);
+    }
+} 
+class Estudiante
+{
+    private int edad;
+    public void SetEdad(int valor)
+    {
+        edad = valor;
+    }
+
+    public int Edad
+    {
+        get
+        {
+            if (edad >= 0 && edad <= 100)
+            {
+                return edad;
+            }
+            return 0;
+        }
+    }
+}
